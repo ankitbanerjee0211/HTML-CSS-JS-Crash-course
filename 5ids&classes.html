@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ids and Classes & some Emmet tricks</title>
+</head>
+<body>
+    <h3>Ids and Classes Tutorial</h3>
+    <div id="mainBox" class="redBg blackBorder">
+        This is mainbox 
+    </div>
+    <!-- one class can be used for multiple elements and an elemenet can use multiple classes -->
+    <!-- But in case of id can't be used in multiple elements | It's unique -->
+
+    <!-- U can use span.redBg and tab key to create the following tag -->
+    <span class="redBg"></span>
+
+    <!-- U can use span#redBg and tab key to create the following tag -->
+    <span id="redBg"></span>
+    <!-- . is for class and # is for id -->
+
+    <!-- Similar thing can be used as follows -->
+    <!-- div.redBg.blackBorder.anotherClass#gaming -->
+    <div class="redBg blackBorder anotherClass" id="gaming"></div>
+
+    <!-- Emmet takes div tag as default -->
+    <!-- .blackBackground will add a div -->
+    <div class="blackBackground"></div>
+
+    <!-- CReating multiple elements using Emmet -->
+    <!-- span.myClass.myClass2.myClass3#super*4 -->
+    <span class="myClass myClass2 myClass3" id="super">first</span>
+    <span class="myClass myClass2 myClass3" id="super">second</span>
+    <span class="myClass myClass2 myClass3" id="super">third</span>
+    <span class="myClass myClass2 myClass3" id="super">fourth</span>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Forms and Input tags</title>
+    </head>
+    <body>
+        <h2>This is HTML forms tutorial</h2>
+        <!-- action is the location where the submitted data is tranferred -->
+        <form action="backend.php">
+            <label for="name">Name</label>
+            <div>
+                Name: <input type="text" name="myName" id="name">
+            </div>
+            <!-- label attribute for and the id attribute of input has to be same -->
+            <br>
+            <!-- But using br tag is not recommended cause we'll do our fomatting with CSS -->
+            <div>
+                Role: <input type="text" name="myRole">
+            </div>
+            <br>
+            <div>
+                Email: <input type="email" name="myEmail">
+            </div>
+            <br>
+            <div>
+                Date: <input type="date" name="myDate">
+            </div>
+            <br>
+            <div>
+                Roll: <input type="number" name="myRoll">
+            </div>
+            <br>
+            <div>
+                <label for="myEligibility">Are you eligible?</label>
+                <input type="checkbox" name="myEligibility" id="myEligibility" checked>
+            </div>
+            <!-- checked is use to mark the check box by default -->
+            <br>
+            <div>
+                Gender: Male <input type="radio" name="myGender"> Female <input type="radio" name="myGender"> Other <input type="radio" name="myGender">
+            </div>
+            <br>
+            <div>
+                Write about yourself: <br><textarea name="myText" cols="30" rows="10"></textarea>
+            </div>
+            <br>
+            <div>
+                Password: <input type="password" name="myPassword">
+            </div>
+            <br>
+            <div>
+                Confirm password: <input type="password" name="myPassword">
+            </div>
+            <br>
+            <div>
+                <label for="car">Car</label>
+                <select name="myCar" id="car">
+                    <option value="Audi">Audi</option>
+                    <option value="BMW" selected>BMW</option>
+                    <option value="Lamborghini">Lamborghini</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <input type="submit" value="Submit Now">
+                <input type="reset" value="Reset Now">
+            </div>
+        </form>
+    </body>
+    </html>
