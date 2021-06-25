@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alignment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Ubuntu', sans-serif;
+        }
+        .container{
+            width: 900px;
+            border: 3px solid purple;
+            margin: 33px auto;
+            background: rgb(205, 255, 165);
+        }
+        .item{
+            border: 3px solid rgb(241, 177, 0);
+            margin: 12px 3px;
+            padding: 12px 3px;
+            background: rgb(255, 242, 242);
+        }
+
+        #fruit{
+            float: left;
+            width: 48%;
+        }
+        #computer{
+            float: right;
+            width: 48%;
+        }
+        #stationary{
+            /* float: left; */
+            width: 100%;
+            clear: both; /* No float elements on the left and right will interfere or overlap*/
+        }
+
+        p, h3{
+            text-align: right;
+            text-align: left;
+            text-align: center;
+            text-align: justify;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to My Store</h1>
+        <div id="fruit" class="item">
+            <h3>Fruit</h3>
+            <p id="fruitPara" class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, eligendi. Vitae deserunt repudiandae vel adipisci molestiae, alias aliquid aperiam harum autem est ullam hic a labore corrupti sint veritatis nobis?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium placeat molestias dolores quas earum pariatur et fugiat eius tempore nesciunt harum ducimus nam consequatur, qui officiis aperiam animi nostrum explicabo! Unde facere aspernatur veniam?</p>
+        </div>
+
+        <div id="computer" class="item">
+            <h3>Computer</h3>
+            <p id="computerPara" class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, eligendi. Vitae deserunt repudiandae vel adipisclorem10  i molestiae, alias aliquid aperiam harum autem est ullam hic a labore corrupti sint veritatis nobis?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium placeat molestias dolores quas earum pariatur et fugiat eius tempore nesciunt harum ducimus nam consequatur, qui officiis aperiam animi nostrum explicabo! Unde facere aspernatur veniam? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae, unde!</p>
+        </div>
+
+        <div id="stationary" class="item">
+            <h3>Stationary</h3>
+            <p id="stationaryPara" class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, eligendi. Vitae deserunt repudiandae vel adipisci molestiae, alias aliquid aperiam harum autem est ullam hic a labore corrupti sint veritatis nobis?</p>
+        </div>
+
+        <div id="glasses" class="item">
+            <h3>Glasses</h3>
+            <p id="glassesPara" class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, eligendi. Vitae deserunt repudiandae vel adipisci molestiae, alias aliquid aperiam harum autem est ullam hic a labore corrupti sint veritatis nobis?</p>
+        </div>
+    </div>
+</body>
+</html>
