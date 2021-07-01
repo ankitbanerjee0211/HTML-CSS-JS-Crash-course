@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Size Units</title>
+    <style>
+        html{
+            font-size: 25px;
+        }
+        .container{
+            margin: 0px auto;
+            width: 50vw;
+            /* view port width | 50 means 50% */
+            height: 100vh; 
+            /* view port height | 100 means 100% */
+            font-size: 10px;
+            border: 2px solid red;
+        }
+        h1{
+            text-align: center;
+        }
+        
+        #first{
+            /* font-size: 3em; */
+            /* as the font size in the container is 10px so itll be calculated as 10*3=30px */
+
+            /* padding: 3em; */
+            /* itll be calculated according to the font-size here so 30*3=90px */
+        }
+        #second{
+            /* font-size: 3rem; */
+            /* padding: 3rem; */
+            /* itll be calculated according to the font-size of base html so 25*3=75px */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="first">This is a first heading</h1>
+        <h1 id="second">This is a second heading</h1>
+        <h1 id="third">This is a third heading</h1>
+    </div>
+</body>
+</html>

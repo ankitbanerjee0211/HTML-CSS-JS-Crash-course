@@ -12,23 +12,31 @@
             border: 2px solid black;
             /* intialize the container as a flex box */
             display: flex;
-            /* flex properties for flex container */
+            /* FLEX PROPERTIES FOR FLEX CONTAINER */
 
-            /* flex-direction: row;  Default */
-            /* flex-direction: column;
-            flex-direction: row-reverse;
-            flex-direction: column-reverse; */
+            /* flex-direction: row;  (Default value)*/
+            /* flex-direction: column; */
+            /* flex-direction: row-reverse; */
+            /* flex-direction: column-reverse; */ */
 
-            flex-wrap: wrap; /* by defalut nowrap */
+            flex-wrap: nowrap; /* by defalut nowrap */
+            /* flex-wrap: wrap; */
             /* flex-wrap: wrap-reverse; */
 
             /* short hand process */
             /* flex-flow: row-reverse wrap; */
 
-            justify-content: center;
+            /* Justifies content in horizontal direction */
+            /* justify-content: center;
             justify-content: space-between;
-            justify-content: space-evenly; /* this is good */
+            justify-content: space-evenly; this is good */
             /* justify-content: space-around; */
+
+            /* center the elements vertically */
+            align-items: center;
+            align-items: flex-end;
+            align-items: flex-start;
+            align-items: stretch;
 
         }
 
@@ -40,6 +48,40 @@
             margin: 10px;
             padding: 3px;
         }
+
+        #item-1{
+            /* FLEX PROPERTIES FOR FLEX CONTAINER */
+            /* order */
+            /* order: 2 */
+            /* order of the element in the flex box */
+            /* higher the order later it shows up in the container */
+
+            /* flex-grow */
+            /* growing and shrinking speed increases and decreases with */
+            /* flex-grow: 2;
+            flex-shrink: 2; */
+
+            /* flex shorthand */
+            /* flex: <flex-grow> <flex-shrink> <flex-basis> */
+            /* flex: 2 2 344px; */
+        }
+        #item-2{
+            /* flex-grow: 3;
+            flex-shrink: 3; */
+
+            /* width of the item at its full length */
+            flex-basis: 320px;
+            /* when flex-direction: is set to row flex-basis: will control width: */
+            /* when flex-direction: is set to column flex-basis: will control heights: */
+        }
+        #item-3{
+            order: 40;
+
+            align-self: flex-end; 
+            /* by default */
+            align-self: flex-start;
+            align-self: center;
+        }
     </style>
 </head>
 <body>
@@ -48,9 +90,9 @@
         <div class="item" id="item-1">First box</div>
         <div class="item" id="item-2">second box</div>
         <div class="item" id="item-3">Third box</div>
-        <div class="item" id="item-4">Fourth box</div>
+        <!-- <div class="item" id="item-4">Fourth box</div>
         <div class="item" id="item-5">Fifth box</div>
-        <div class="item" id="item-6">Sixth box</div>
+        <div class="item" id="item-6">Sixth box</div> -->
     </div>
 
 </body>
