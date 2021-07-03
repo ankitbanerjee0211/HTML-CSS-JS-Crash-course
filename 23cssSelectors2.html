@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS Selectors</title>
+    <style>
+        h1{
+            background-color: red;
+            color: antiquewhite;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* For every p inside a main div */
+        /* it can be inside another tag there */
+        /* div li p{
+            background-color: rgb(27, 248, 27);
+            color: yellow;
+            font-weight: bold;
+            text-align: center;
+        } */
+
+
+        /* In case u want only the direct child of the respective tag to be affected */
+        /* div > p{
+            background-color: rgb(27, 248, 27);
+            color: yellow;
+            font-weight: bold;
+        } */
+        /* In a nutshell it'll only affect the p tags directly inside the div tag */
+
+
+        /* To affect the p tag which is the next sibling of the div tag */
+        div + p{
+            color: white;
+            background-color: rgb(219, 122, 122);
+
+        }
+    </style>
+</head>
+<body>
+    <h1>This is more on selectors.</h1>
+
+    <div class="container">
+        <div class="row">
+            <ul>
+                <li class="item"><p>This is another paragraph inside li</p></li>
+                <li>This will not be affected</li>
+            </ul>
+            <p>This is a paragraph</p>
+        </div>
+        <p>This is another paragraph</p>
+    </div>
+    <p>This is outermost paragraph</p>
+</body>
+</html>
