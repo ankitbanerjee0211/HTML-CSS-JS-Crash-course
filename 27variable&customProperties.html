@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables and Custom Properties</title>
+    <style>
+        /* defining global variables */
+        :root{
+            --primary-color: rgb(40, 137, 221);
+            --danger-color: red;
+            --bg-color: rgb(214, 214, 214);
+            --maxw: 733px;
+        }
+
+        .container{
+            display: flex;
+            /* horizontal centering */
+            align-items: center; 
+            /* vertical centering */
+            justify-content: center;
+            width: var(--maxw);
+            margin: auto;
+            background-color: var(--bg-color) ;
+        }
+        .box{
+            /* variable creation */
+            --box-color: rgb(40, 137, 221);
+            /* it is a local variable */
+
+            width: 200px;
+            height: 200px;
+            background-color: var(--box-color);
+            margin: 2px 9px;
+            padding: 15px 15px;
+            border: 2px solid var(--danger-color);
+            /* box-shadow: 5px 5px var(--box-color); */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box-1"></div>
+        <div class="box" id="box-2"></div>
+        <div class="box" id="box-3"></div>
+    </div>
+</body>
+</html>
