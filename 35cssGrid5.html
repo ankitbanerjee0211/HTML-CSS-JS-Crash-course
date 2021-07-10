@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Layouts Using Grid Template Area</title>
+    <style>
+        .container {
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas:
+                /* the no of repeated column will be always same */
+                /* it is a matrix formation */
+                'navbar navbar navbar navbar'
+                'section section section aside'
+                'footer footer footer footer'
+            ;
+        }
+
+        .item {
+            background-color: yellow;
+            border: 3px solid black;
+            padding: 12px 23px;
+        }
+
+        #navbar {
+            /* defining name of the grid area */
+            grid-area: navbar;
+        }
+
+        #section {
+            grid-area: section;
+        }
+
+        #aside {
+            grid-area: aside;
+        }
+
+        footer {
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="navbar" class="item">
+            HOME ABOUT CONTACT US
+        </div>
+        <div id="section" class="item">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit corporis rem laudantium accusamus?
+            Repudiandae reprehenderit doloremque quas laudantium ad. Quod excepturi vero voluptas necessitatibus magnam
+            quas. Iure modi praesentium cupiditate!
+        </div>
+        <div id="aside" class="item">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto optio at iure, maxime cupiditate voluptate
+            fuga perferendis quisquam quis sint!
+        </div>
+
+        <footer class="item">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis nostrum eos nihil!
+        </footer>
+
+    </div>
+</body>
+
+</html>
