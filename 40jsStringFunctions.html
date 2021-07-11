@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Functions in JavaScript</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+    </div>
+
+    <script>
+        var str = "This is a string";
+        console.log(str);
+
+        // finding index/serial no. of a string inside of a string. It specifies the starting index of the string. And the indexing pf the main string starts from 0.
+
+        // for the 1st occurance of a substring
+        var position = str.indexOf('is');
+        // console.log(position);
+        var position = str.indexOf('st');
+        // console.log(position);
+
+        // for the last occurance of a substring
+        position = str.lastIndexOf('is');
+        // console.log(position);
+
+        // substring from a String
+        // slicing method
+        var substr1 = str.slice(1, 6);
+        // this can take -ve values ehich substring method can't
+        // console.log(substr1);
+
+        // substring method
+        var substr2 = str.substring(1, 7);
+        // console.log(substr2);
+
+        // substr method
+        var substr3 = str.substr(1, 6);
+        // substr(starting index, length from given index)
+        // console.log(substr3);
+
+
+        // Replacing
+        var replaced = str.replace('string', 'goat');
+        // console.log(str);
+        // console.log(replaced);
+
+        // Uppercase
+        // console.log(str.toUpperCase());
+        // Uppercase
+        // console.log(str.toLowerCase());
+        
+        // Concatenation of strings
+        // var newString = str.concat(substr3);
+        var newString = str.concat(".");
+        // console.log(newString);
+
+
+        // Trimming or stripping
+        var strWithWhitespaces = "  This  contains          whitespaces    .\n\t";
+        console.log(strWithWhitespaces);
+        console.log(strWithWhitespaces.trim());
+        // This trims whitespaces from both sides
+
+
+        // charAt: to know the character in that position or index
+        var char2 = str.charAt(2);
+        // to know ASCII code of char
+        var charCode2 = str.charCodeAt(2);
+        console.log(char2, charCode2);
+
+        // or u can easily do this
+        console.log(str[2], str[2].charCodeAt(0));
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings and String Mehods in JavaScript</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Lorem ipsum dolor sit.</h1>
+        <div id="content"></div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem itaque fugit, reiciendis, molestias perferendis
+            placeat praesentium, expedita beatae possimus vitae culpa asperiores consequatur amet debitis? Hic itaque
+            eos rem nisi. Iste sapiente molestias delectus!</p>
+    </div>
+    <script>
+        // '' or "" rule
+        // if theres a " inside the strig then use '' and vice versa
+        // var string = "th'i's";
+        var string = "This";
+        var name = "Ankit";
+        var dept = "ME";
+        var message = 'Ankit is a student';
+        // console.log(string + name + message);
+
+        // To nullify the doubt about using single or double quote
+        var temp = `I don't know if ${name} is a "nice" person or not but he's in '${dept}' department.`;
+        // console.log(temp);
+        var len = name.length;
+        // console.log(`Length of name '${name}' is ${len}.`)
+
+        // Escape sequence characters
+        // console.log("Hello world\nBye bye\tgood bye");
+
+        // if u wanna write \n in the string just write \\n
+
+        // String Constructor
+        var y = new String("this");
+        // console.log(y);
+
+        // Projecting HTML in the body
+        document.getElementById('content').innerHTML = '<h3>This is a h3 heading.</h3>';
+
+    </script>
+</body>
+
+</html>
