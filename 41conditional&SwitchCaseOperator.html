@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope, If-else Conditionals & Switch Case in JavaScript</title>
+</head>
+<body>
+    <!-- emmet abriviation -->
+    <!-- div>ul>li{Item-$}*7 -->
+    <div>
+        <ul>
+            <li>Item-1</li>
+            <li>Item-2</li>
+            <li>Item-3</li>
+            <li>Item-4</li>
+            <li>Item-5</li>
+            <li>Item-6</li>
+            <li>Item-7</li>
+        </ul>
+    </div>
+    <div id='vote'></div>
+    <div id='bottle'></div>
+
+    <script>
+        // There can be two ways to declare a variable
+        // The var method which makes global variables
+        var string1 = "This is a string";
+        var string1 = "This is a string2";
+        // It easily replaces the previous value of the variable if u declare the variable once more
+        // console.log(string1);
+        // Let method
+        let a = "u";
+        // console.log(a);
+
+        // In this {} we can create block varibles which r only available inside the block
+        {
+            let a2 = "u2";
+            // console.log(a2);
+        }
+        // console.log(a2);
+        // It'll raise an error in the console if u redeclare a variable
+
+
+        // CONSTANT
+        // This can't be changed
+        const a3 = "This can not be changed";
+        // a3 = "I want to change this"; This will show an error
+
+
+        // IF ELSE CONDITIONAL OPERATOR
+        let age = 18;
+        if(age>18){
+            console.log("You can vote.");
+            document.getElementById('vote').innerHTML = '<h3>You can vote.</h3>';
+        }
+        else if(age == 18){
+            console.log("Register yourself as a voter.");
+            document.getElementById('vote').innerHTML = '<h3>Register yourself as a voter.</h3>';
+        }
+        else{
+            console.log("You can't vote. LOL");
+            document.getElementById('vote').innerHTML = '<h3>You can not vote. LOL</h3>';
+        }
+
+
+        //  SWITCH CASE OPERATOR
+        const bottles = 30;
+        // it can be of string datatype also
+        switch (bottles) {
+            case 10:
+                document.getElementById('bottle').innerHTML = "<h2>The number of cup is 10</h2>";
+                break;
+            case 20:
+                document.getElementById('bottle').innerHTML = "<h2>The number of cup is 20</h2>";
+                break;
+            case 30:
+                document.getElementById('bottle').innerHTML = "<h2>OMG! who orders 30 cups of tea?</h2>";
+                break;
+            default:
+                document.getElementById('bottle').innerHTML = "<h2>The number of cup is not 10, 20 or 30.</h2>";
+                break;
+        }
+
+
+    </script>
+</body>
+</html>

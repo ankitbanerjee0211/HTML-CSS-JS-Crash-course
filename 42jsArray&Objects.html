@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays & Objects in JavaScript</title>
+</head>
+<body>
+    <div class="container">It's a container</div>
+    <script>
+        // SOME TYPE OF VARIABLES
+        let myVar = 55;
+        let myVar2 = "string";
+        let myVar3 = true;
+        let myVar4 = null;
+        let myVar5 = undefined;
+
+        // DEFINING OBJECT
+        let student = {
+            name: "Ankit",
+            roll: 10200719055,
+            stream: "Mechanical Engineering",
+            50: 54,
+            "reg no" : "036754",
+            // u have to quote key name having whitespaces
+        }
+        // console.log(student.name);
+        // console.log(student['name']);
+        // console.log(student[50]);
+        // console.log(student['reg no']);
+
+
+        // console.log(student);
+
+        // ARRAY
+        let arr = [myVar, myVar2, myVar3, myVar4, myVar5];
+        // console.log(arr);
+        // console.log(arr[1]);
+        // indexing strats from 0
+        // console.log(arr[3]);
+
+        // sorting an array
+        arr = arr.sort();
+        // console.log(arr);
+        
+        // or u can create array by
+        let arr2 = new Array(35, 10, 5);
+        // console.log(arr2);
+        // console.log(arr2.length);
+
+        // adding element to an array
+        arr2.push("This is pushed");
+        // console.log(arr2);
+
+        let names = new Array(23, 45);
+        // if u want to make an 1D array of n elements then
+        let blank = new Array(20);
+        console.log(blank);
+
+    </script>
+</body>
+</html>
