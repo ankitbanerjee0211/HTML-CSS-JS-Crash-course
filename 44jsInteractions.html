@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Interaction - Alert, Prompt, Confirm</title>
+</head>
+<body>
+    <div id="greeting"></div>
+    <div class="container">
+        This is a page
+    </div>
+
+
+    <script>
+        //// ALERT IN IN-BROWSER JAVASCRIPT
+
+        // doesnt return anything
+        // alert("This is a message");
+
+
+        //// PROMPT
+
+        let username = prompt("Enter your username: ", "Guest");
+        // prompt(label, default value)
+        console.log("Username: " + username);
+        function greet(name){
+            return "Welcome back "+name+"!";
+        }
+        document.getElementById('greeting').innerHTML = '<h2>' + greet(username) + '</h2>';
+
+
+        //// CONFIRM
+
+        let deleteAccount = confirm("Do you really want to delete your account?");
+        console.log("Your choice: " + deleteAccount);
+        if(deleteAccount){
+            // Code to delete the account
+            console.log("Your account has been deleted successfully.");
+        }
+        else{
+            // Code not to delete the account
+            console.log("Your account is intact.");
+        }
+
+    </script>
+</body>
+</html>

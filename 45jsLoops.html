@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for, forEach, forOf, while, Do While Loops</title>
+</head>
+
+<body>
+    <div class="container">
+        This is a page about loops.
+    </div>
+
+
+    <script>
+        console.log("Loops\n-----\n");
+
+        //// FOR LOOP
+
+        let i = 0;
+        for (i = 0; i < 4; i++) {
+            console.log(i);
+        }
+
+        let friends = ["Ankit", "Sarbo", "Murgi", "Arnob"];
+        function greet(name) {
+            console.log("Hello friend, " + name);
+        }
+        for (i = 0; i < friends.length; i++) {
+            greet(friends[i]);
+        }
+
+        // PREFERABLE LOOPS FOR ARRAY ITERATION
+        // forEach Process
+        friends.forEach(function welcome(name) {
+            console.log("Welcome friend, " + name);
+        });
+
+        // forOf Loop Process
+        for (friend of friends) {
+            console.log("Welcome " + friend);
+        }
+
+        // OBJECT ITERATION
+        let student = {
+            name: "Ankit",
+            roll: 55,
+            stream: 'ME'
+        }
+
+        for (key in student) {
+            console.log(`The ${key} of the student is ${student[key]}`);
+        }
+
+
+
+        //// WHILE LOOP
+        let j = 0;
+        while (j < 4) {
+            console.log(`${j} is less than 4.`);
+            j++;
+        }
+
+
+        //// DO WHILE LOOP
+        let k = 0;
+        do {
+            console.log(`${k} is less than 5.`);
+            k++;
+        } while (k < 5);
+        // this will execute at least one time before checking the condition
+        
+
+    </script>
+</body>
+
+</html>
