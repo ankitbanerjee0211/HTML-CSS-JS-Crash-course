@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Events & Listening to Events</title>
+</head>
+
+<style>
+    #btn {
+        padding: 10px 14px;
+        background-color: aquamarine;
+        color: black;
+        text-shadow: 0 0 10px white, 0 0 10px white, 0 0 10px white;
+        border: 2px solid goldenrod;
+        cursor: pointer;
+        font-weight: bolder;
+        border-radius: 8px;
+    }
+</style>
+
+<body>
+    <!-- Browser events:
+        click
+        contextmenu(right click)
+        mouseover/mouseout
+        mousedown/mouseout
+        mousemove
+
+        submit
+        focus
+
+        DOMContentLoaded
+
+        tnasitionEnd -->
+
+    <div class="container">
+        <h1 id="heading">This is my heading</h1>
+        <p id="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae consequuntur neque incidunt ipsam a
+            ea maxime pariatur harum vel corporis placeat quos dicta doloremque earum fugit sapiente laboriosam et
+            dolores, quam voluptatum veritatis? Culpa praesentium assumenda saepe repudiandae eaque totam?Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Praesentium facere architecto labore eos ad debitis commodi
+            explicabo cum odit nisi.</p>
+    </div>
+
+    <button id="btn" onclick="toggleHide()">Show/Hide</button>
+
+    <script>
+        // EVENT LISTNER
+        let heading = document.getElementById('heading');
+        heading.addEventListener('mouseover', function help() {
+            console.log('Mouse inside Heading');
+        });
+        heading.addEventListener('mouseout', function help() {
+            console.log('Mouse outside Heading');
+        });
+
+        function toggleHide() {
+            let btn = document.getElementById('btn');
+            let para = document.getElementById('para');
+            // if this is not specified we can directly use the btn or para because they are ids
+            // but this is the proper way to do it
+
+            // if(para.style.display != 'none'){
+            //     para.style.display = 'none';
+            // }
+            // else{
+            //     para.style.display = 'block';
+            // }
+
+            // the better version to maintain the structure of the page
+            if (para.style.visibility != 'hidden') {
+                para.style.visibility = 'hidden';
+            }
+            else {
+                para.style.visibility = 'visible';
+            }
+        }
+    </script>
+
+</body>
+
+</html>
