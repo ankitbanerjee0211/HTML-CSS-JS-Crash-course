@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions In JavaScript</title>
+</head>
+
+<style>
+    
+</style>
+
+<body>
+
+    <div class="container">
+        This is a container
+    </div>
+        
+    <script>
+        // basic function
+        function greet(){
+            console.log('Good Morning');
+        }
+        greet();
+
+        // arrow function
+        let greet2 = () => {
+            console.log("Good Noon");
+        }
+        setTimeout(greet2, 2000);
+
+        let sum = (a, b) => {
+            return a+b;
+        }
+        // shortcut
+        let sum2 = (a,b) => a+b;
+        console.log(sum2(5,10));
+
+        let half = a => a/2;
+        // for only one argument
+        console.log(half(27));
+
+        //if u have no argument then
+        let greet3 = () => console.log("Hello");
+
+
+        // setTimeout arrow function writing
+        setTimeout(() => {
+            console.log("Good Night");
+        }, 4000);
+
+
+        let obj1 = {
+            greeting: "Hello ",
+            names: ["Ankit", "Arnob", "Sarbo", "Souma"],
+            speak(){
+                this.names.forEach((student)=>{
+                    console.log(this.greeting + student);
+                });
+                // if we use a function here instead of arrow function the 'this' operator will not be of any help because the this.greeting will be the greeting inside the function
+                // this is called 'lexical this'
+            }
+        }
+        obj1.speak();
+
+    </script>
+
+</body>
+
+</html>

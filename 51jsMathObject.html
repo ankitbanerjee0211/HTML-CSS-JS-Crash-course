@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Object In JavaScript</title>
+</head>
+
+<style>
+    
+</style>
+
+<body>
+
+    <div class="container">
+        <h1>This is a container</h1>
+    </div>
+        
+    <script>
+        // PRINTING THE MATH OBJECT
+        let m = Math;
+        console.log(m);
+
+        // PRINTING THE CONSTANTS FROM MATH OBJECTS
+        console.log("The value of Math.E is ", Math.E);
+        console.log("The value of Math.PI is ", Math.PI);
+        console.log("The value of Math.LN2 is ", Math.LN2);
+        console.log("The value of Math.SQRT2 is ", Math.SQRT2);
+
+        // PRINTING THE FUNCTIONS FROM MATH OBJECTS
+        let a = 34.64;
+        let b = 25.32;
+        console.log("The value of a and b is", a + ", " + b);
+        console.log("The rounded value of a and b is", Math.round(a) + ", " + Math.round(b));
+        console.log("2 raised to the power 5 is", Math.pow(2, 5));
+
+        // MORE FUNCTIONS
+        console.log(m.sqrt(50));
+        // to the nearest integer upper than the float
+        console.log(m.ceil(40.2));
+        // to the nearest integer lower than the float
+        console.log(m.floor(40.6));
+        //absolute function
+        console.log(m.abs(-5.66));
+        // trigonometric functions
+        console.log(m.sin(m.PI));
+        // others are tan, cos, asin, atan, acos etc....
+
+        // min and max functions
+        // let nums = new Array(4, 5, 6);
+        // console.log(m.min(nums));
+        console.log(m.min(4,8,9));
+        console.log(m.max(4,8,9));
+
+        //// GENERATING A RANDOM NUMBERS
+        // generating a random number btw 0 and 1
+        let r = Math.random();
+        console.log(r);
+        // generating a random number btw a and b = a + (b-a)*Math.random()
+        let r1_100 = 1 + (100-1)*Math.random()
+        console.log(r1_100);
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS setInterval, setTimeout, clearTimeout, clearInterval</title>
+</head>
+
+<style>
+    #btn{
+        padding: 10px 20px;
+        margin: 10px 0;
+        font-size: 1.2rem;
+    }
+    .container{
+        font-size: 23px;
+        background-color: blanchedalmond;
+        border: 2px solid grey;
+        padding: 34px;
+        margin: 4px;
+        text-align: center;
+    }
+    #time{
+        font-weight: bolder;
+    }
+    .center{
+        text-align: center;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        Time now is <span id="time"></span>
+    </div>
+    <div class="center">
+        <button id="btn" onclick="stopTime()">Stop the Time</button>
+    </div>
+
+    <script>
+        console.log("lorem kired foigd");
+
+        //// setTimeOut --> allows us to run the function once after the interval of time
+
+        function greet(name, surname){
+            console.log("Konnichiwa " + name, surname);
+        }
+        // greet();
+
+        // setTimeout(greet, 10000, "Ankit", 'Banerjee');
+        // (function, timeInterval, it is the inputs in greet)
+        // don't call the function inside setTimeOut; just specify the name
+
+        // timeOut = setTimeout(greet, 3000, "Ankit", 'Banerjee');
+        // console.log(timeOut);
+        // this will allocate a number to the setTimeOut
+
+
+        //// clearTimeout -->
+        // by clearTimeout command we can cancel the setTimeout event like this
+        // clearTimeout(timeOut);
+
+        //// setInterval -->
+        // Allows us to run the fiunction repeatedly after the interval of time
+        intervalId = setInterval(greet, 1000, "Ankit", 'Banerjee');
+
+        //// clearInterval -->
+        // by this command we can cancel the setInterval event like this
+        clearInterval(intervalId);
+
+        function displayTime(){
+            time = new Date();
+            // console.log(time);
+            document.getElementById('time').innerHTML = time;
+        }
+        intervalId2 = setInterval(displayTime, 1000);
+        // console.log(intervalId2);
+
+        function stopTime(){
+            clearInterval(intervalId2);
+        }
+    </script>
+
+</body>
+
+</html>
