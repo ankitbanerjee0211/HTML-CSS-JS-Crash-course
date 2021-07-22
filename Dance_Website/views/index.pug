@@ -1,0 +1,25 @@
+doctype html
+html
+    head 
+        title Ankit's Dance Academy
+        style
+            include ../static/style.css
+    body 
+        nav#navbar 
+            ul
+                li #[a(href= '/') Home] 
+                li #[a(href= '/') About] 
+                li #[a(href= '/') Services] 
+                li #[a(href= '/') Class Info] 
+                li #[a(href= '/') Contact Us] 
+        section#introSection
+            div Welcome to Ankit's Dance Academy
+            div.small Eat Sleep Dance Repeat
+        section#missionSection
+            h2 Our Mission 
+        section#sponsorSection
+            h2 Our Sponsors 
+        footer#footer 
+            | Our footer here
+        script 
+            include ../static/index.js

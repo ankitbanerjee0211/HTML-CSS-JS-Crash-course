@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "60express"
+		},
+		{
+			"path": "..\\tictactoe"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "..\\Face_Recognition_App_Using_Python"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "tictactoe"
+	}
+}

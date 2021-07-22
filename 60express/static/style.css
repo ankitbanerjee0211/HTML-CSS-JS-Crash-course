@@ -5,7 +5,7 @@
 }
 
 nav{
-    background-color: blanchedalmond;
+    background-color: rgb(8, 6, 3);
     padding: 3px 12px;
 }
 ul{
@@ -15,12 +15,13 @@ ul{
 
 li{
     list-style: none;
-    padding: 12px 25px; 
+    padding: 12px 25px;
 }
 
 a{
     text-decoration: none;
-    font-weight: bold;
+    font-weight: bolder;
+    color: azure;
 }
 
 h2{
@@ -57,7 +58,7 @@ input, textarea{
 }
 
 .btn{
-    margin:5px auto;
+    margin: auto;
     display: block;
     width: 60%;
     padding: 12px 0;
