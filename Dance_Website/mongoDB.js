@@ -1,0 +1,62 @@
+// Step-1
+// ----------------------------
+// Open Windows powershell(admin)
+// use mongod command
+
+// Step-2
+// ----------------------------
+// Open another Windows powershell(admin)
+// use mongo command
+
+//// Some commands:
+// -----------------------------
+// 1) To know the current database:
+> db
+test
+(test by default)
+
+// 2) To switch database
+> use ankit
+switched to db ankit
+
+// 3) To show the databases:
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+
+// 4) To show the collections in the database:
+> show collections
+
+// 5) To write some collection
+> db.text.insert({})
+WriteResult({ "nInserted" : 1 })
+> show dbs
+admin   0.000GB
+ankit   0.000GB
+config  0.000GB
+local   0.000GB
+> show collections
+text
+> db
+ankit
+> db.text.insert({"name":"Ankit"})
+WriteResult({ "nInserted" : 1 })
+// In MongoDB
+collection == table
+// Use right click to paste in db command panel
+
+// creating or selecting database
+use ankitKart
+
+// Inserting data in mongo db
+db.items.insertOne({name: "Samsung 30s", price: 22000, rating: 4.5, qty: 233, sold: 98})
+// here items is the data collection
+
+// To visualize the data in a collection
+db.items.find()
+// a type of query this is
+
+// Inserting many data at once
+db.items.insertMany([{name: "Moto s1", price: 2000, rating: 4, qty: 13, sold: 8}, {name: "Redmi 6", price: 8000, rating: 4.8, qty: 233, sold: 980}]) // it is input as a array
+// there can be more attributes added 
