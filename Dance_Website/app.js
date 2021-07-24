@@ -24,10 +24,14 @@ app.set('view engine', 'pug');
 /// Step-8 set the views directory
 app.set('views', path.join(__dirname, 'views')); //(setting, file path)
 
-//// Step-9 endpoints
+/// Step-9 endpoints
 app.get('/', (req, res)=>{
-    const params = {}
-    res.status(200).render('index.pug', params);
+    const params = {};
+    res.status(200).render('home.pug', params);
+})
+app.get('/contact', (req, res)=>{
+    const params = {};
+    res.status(200).render('contact.pug', params);
 })
 
 
