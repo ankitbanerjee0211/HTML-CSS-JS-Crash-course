@@ -60,3 +60,24 @@ db.items.find()
 // Inserting many data at once
 db.items.insertMany([{name: "Moto s1", price: 2000, rating: 4, qty: 13, sold: 8}, {name: "Redmi 6", price: 8000, rating: 4.8, qty: 233, sold: 980}]) // it is input as a array
 // there can be more attributes added 
+
+
+//// Searching/Querying data from the Mongo Database
+db.items.find({rating: 4.8}) //(filter object)
+db.items.find({rating: {$gte: 4}})
+db.items.find({rating: {$gt: 4}})
+// $gte == greater than or equal to
+// $gt == greater than
+// $lte == less than or equal to
+// $lt == less than
+// Logical operators
+// AND Operator
+db.items.find({rating: {$gt: 4}, price: {$gt: 10000}})
+// OR operator
+db.items.find({$or:[{rating: {$gt: 4}}, {price: {$gt: 10000}}]})
+// Projection
+db.items.find({rating: {$gt: 4}}, {rating:1})
+// so only rating will be shown
+db.items.find({rating: {$gt: 4}}, {rating:1, qty:1})
+
+//// Deleting data from the Mongo Database
