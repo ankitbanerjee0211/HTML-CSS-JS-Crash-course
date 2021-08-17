@@ -62,7 +62,7 @@ db.items.insertMany([{name: "Moto s1", price: 2000, rating: 4, qty: 13, sold: 8}
 // there can be more attributes added 
 
 
-//// Searching/Querying data from the Mongo Database
+////// Searching/Querying data from the Mongo Database
 db.items.find({rating: 4.8}) //(filter object)
 db.items.find({rating: {$gte: 4}})
 db.items.find({rating: {$gt: 4}})
@@ -75,9 +75,22 @@ db.items.find({rating: {$gt: 4}})
 db.items.find({rating: {$gt: 4}, price: {$gt: 10000}})
 // OR operator
 db.items.find({$or:[{rating: {$gt: 4}}, {price: {$gt: 10000}}]})
-// Projection
-db.items.find({rating: {$gt: 4}}, {rating:1})
+//// Projection
 // so only rating will be shown
+db.items.find({rating: {$gt: 4}}, {rating:1})
+// which are given value 1 ie true is shown
 db.items.find({rating: {$gt: 4}}, {rating:1, qty:1})
 
-//// Deleting data from the Mongo Database
+
+////// Deleting data from the Mongo Database
+// delete the first matching entry or document from the db
+db.items.deleteOne({price: 22000})
+// for multiple delete or delete all matching documents
+db.items.deleteMany({price: 22000})
+
+
+////// Updating data from the Mongo Database
+db.items.updateOne({name: "Moto s1"}, {$set: {price: 2, rating: 1}}) 
+// db.items.updateOne(finding object, {operation: update attribute and value}) 
+db.items.updateMany({name: "Moto s1"}, {$set: {price: 3, rating: 0}}) 
+// db.items.updateMany(finding object, {operation: update attributes and value}) 
