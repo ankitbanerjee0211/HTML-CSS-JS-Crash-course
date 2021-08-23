@@ -1,7 +1,25 @@
 const express = require('express');
 const path = require('path');
 const app = express();
+// Step - 11
+// making a database named 'contactDance'
+// and connecting and importing mongoose
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/contactDance', {useNewUrlParser: true, useUnifiedTopology: true});
 const port = 8000;
+// Requiring body-parser
+const bodyparser = require('body-parser');
+
+// Define mongoose schema
+const contactSchema = new mongoose.Schema({
+    name: String,
+    phone: String,
+    email: String,
+    address: String,
+    desc: String
+});
+// Making a model out of predefined schema
+const Contact = mongoose.model('Contact', contactSchema);
 
 //// Step-1 creating package.json
 /// 'npm init' in terminal
@@ -29,10 +47,25 @@ app.get('/', (req, res)=>{
     const params = {};
     res.status(200).render('home.pug', params);
 })
+
 app.get('/contact', (req, res)=>{
     const params = {};
-    res.status(200).render('contact.pug', params);
+    res.status(200).render('contact.pug');
 })
+
+app.post('/contact', (req, res)=>{
+    var myData = new Contact(req.body);
+    myData.save().then(()=>{
+        res.send("Your complaint/request is successfully lodged.")
+    }).catch(()=>{
+        res.status(404).send("Your complaint/request is not saved to the database.")
+    })
+    // catch is used for error cases
+
+    // res.status(200).render('contact.pug', params);
+})
+
+//// Step-12 install body-parser
 
 
 //// Step-10 start the server
